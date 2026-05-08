@@ -54,10 +54,10 @@ function createFilmCard(film) {
   content.className = "card-content";
 
   const title = document.createElement("h3");
-  title.textContent = film.title || "Sans titre";
+  title.textContent = film.title || "Untitled";
 
   const desc = document.createElement("p");
-  desc.textContent = film.description || "Pas de description.";
+  desc.textContent = film.description || "No description available.";
 
   content.appendChild(title);
   content.appendChild(desc);
@@ -77,16 +77,16 @@ async function fetchFilms() {
 button.addEventListener("click", async () => {
   try {
     button.disabled = true;
-    setStatus("Chargement des films...");
+    setStatus("Loading films...");
     clearFilms();
 
     const films = await fetchFilms();
     films.forEach((film) => cardsContainer.appendChild(createFilmCard(film)));
 
-    setStatus(`✅ ${films.length} films affichés.`);
+    setStatus(`✅ ${films.length} films loaded.`);
   } catch (err) {
     console.error(err);
-    setStatus("❌ Erreur API. Réessaie.");
+    setStatus("❌ API error. Please try again.");
   } finally {
     button.disabled = false;
   }
@@ -136,7 +136,7 @@ function createPostElement({ title, text, image }) {
   const deleteBtn = document.createElement("button");
   deleteBtn.className = "btn danger";
   deleteBtn.type = "button";
-  deleteBtn.textContent = "Supprimer";
+  deleteBtn.textContent = "Delete";
   deleteBtn.addEventListener("click", () => {
     // SUPPRESSION POST + IMAGE (#8)
     post.remove();

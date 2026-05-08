@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
       <div class="brand">Project API</div>
 
       <ul class="nav-links">
-        <li><a href="#home">Accueil</a></li>
+        <li><a href="#home">Home</a></li>
 
 
         <li class="dropdown" id="dropdown">
@@ -24,7 +24,7 @@
           <ul class="dropdown-menu" id="dropdownMenu" role="menu">
             <li role="none"><a role="menuitem" href="#films">Films (API)</a></li>
             <li role="none"><a role="menuitem" href="#posts">Posts</a></li>
-            <li role="none"><a role="menuitem" href="#gallery">Galerie</a></li>
+            <li role="none"><a role="menuitem" href="#gallery">Gallery</a></li>
           </ul>
         </li>
 
@@ -36,8 +36,8 @@
   <main class="main" id="home">
 
     <section class="hero" id="films">
-      <h1>Films Studio Ghibli</h1>
-      <p>Clique pour générer toutes les cards via l’API.</p>
+      <h1>Studio Ghibli Films</h1>
+      <p>Click to generate all cards from the API.</p>
       <button id="zone" class="btn">API GENERATE 🤖</button>
       <p id="status" class="status"></p>
 
@@ -47,29 +47,29 @@
 
     <section class="section" id="posts">
       <h2>Posts / Articles</h2>
-      <p>Ajoute un post (avec image optionnelle) puis supprime-le.</p>
+      <p>Add a post (with an optional image) then delete it.</p>
 
       <form id="postForm" class="form">
-        <input id="postTitle" type="text" placeholder="Titre du post" required />
-        <textarea id="postText" placeholder="Contenu du post" required></textarea>
+        <input id="postTitle" type="text" placeholder="Post title" required />
+        <textarea id="postText" placeholder="Post content" required></textarea>
 
-        <input id="postImageUrl" type="url" placeholder="URL d'image (optionnel)" />
+        <input id="postImageUrl" type="url" placeholder="Image URL (optional)" />
         <input id="postImageFile" type="file" accept="image/*" />
 
-        <button class="btn" type="submit">Créer le post</button>
+        <button class="btn" type="submit">Create post</button>
       </form>
 
       <div id="postsContainer" class="posts-grid"></div>
     </section>
 
     <section class="section" id="gallery">
-      <h2>Galerie</h2>
-      <p>Ajoute une image dans la galerie puis supprime-la.</p>
+      <h2>Gallery</h2>
+      <p>Add an image to the gallery then delete it.</p>
 
       <form id="galleryForm" class="form">
-        <input id="galleryImageUrl" type="url" placeholder="URL d'image" />
+        <input id="galleryImageUrl" type="url" placeholder="Image URL" />
         <input id="galleryImageFile" type="file" accept="image/*" />
-        <button class="btn" type="submit">Ajouter à la galerie</button>
+        <button class="btn" type="submit">Add to gallery</button>
       </form>
 
       <div id="galleryGrid" class="gallery-grid"></div>
@@ -77,7 +77,7 @@
 
     <section class="section" id="contact">
       <h2>Contact</h2>
-      <p>Section contact (placeholder).</p>
+      <p>Contact section (placeholder).</p>
     </section>
 
   </main>
